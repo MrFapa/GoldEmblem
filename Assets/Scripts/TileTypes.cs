@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TileTopping
+namespace TileTypes
 {
 
     public enum TileType
