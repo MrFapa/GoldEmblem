@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using TileTypes;
 
 namespace TileTopping
 {
@@ -13,9 +15,14 @@ namespace TileTopping
     }
     public class TileToppingFunctions
     {
-        public bool isBreakable(TileToppingType type)
+        public static bool isBreakable(TileToppingType type)
         {
             return (type == TileToppingType.tree) ? true : false;
+        }
+        public static bool isWalkable(TileToppingType tileTopping)
+        {
+            TileToppingType[] walkable = { TileToppingType.nothing };
+            return walkable.Contains(tileTopping);
         }
 
         public TileToppingType getRandomTopping(TileType type)
